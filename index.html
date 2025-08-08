@@ -12,19 +12,22 @@
 <body>
 
  
-
- 
 <header>
   <nav class="navbar">
+  <div class="navbar-container">
     <div class="logo"><h1>Soda Sip</h1></div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#menu"> Summer Menu</a></li>
-      <li><a href="winter-menu.html">Winter Menu</a></li>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Summer Menu</a></li>
+    <li><a href="winter-menu.html">Winter Menu</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+</nav>
 
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-  </nav>
+</header>
+
   
 <section id="home" class="home-section">
   <div class="home-content">
@@ -36,7 +39,7 @@
 </section>
 
 
-</header>
+
 
 <main>
   <h2 id="menu" class="menu-title">Summer Menu</h2>
@@ -174,6 +177,11 @@
 <canvas id="particleCanvas"></canvas>
 
 <script>
+
+
+
+
+
 const canvas = document.getElementById('particleCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -232,8 +240,20 @@ window.addEventListener('resize', () => {
 });
 </script>
 
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+
 <a href="tel:+923004706005" class="call-icon" title="Call Soda Sip 📞">
   📞
 </a>
+
+
 </body>
 </html>
