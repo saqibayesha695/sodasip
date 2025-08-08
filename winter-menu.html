@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soda Sip | Winter Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Quicksand', sans-serif;
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
+    }
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('Gemini_Generated_Image_pj5jfepj5jfepj5j-min-min.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+    }
+    .hero-title {
+      text-align: right;
+    }
+    .hero-title h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .back-btn {
+      display: inline-block;
+      background: #ff5722;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      box-shadow: 0 0 15px #ff5722;
+      background: #e64a19;
+    }
+    .menu-section {
+      padding: 60px 20px;
+      background: #111;
+    }
+    .category {
+      margin-bottom: 40px;
+    }
+    .category h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .menu-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid #03e9f4;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .menu-card:hover {
+      box-shadow: 0 0 15px #03e9f4;
+      transform: translateY(-6px);
+    }
+    .menu-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+    .menu-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .menu-price {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    .snow {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-title h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas class="snow"></canvas>
+
+  <section class="hero">
+    <div class="hero-title">
+      <h1>Winter Menu</h1>
+      <a href="index.html" class="back-btn">← Back to Summer Menu</a>
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <div class="category">
+      <h2><i class="fas fa-mug-hot"></i> Tea & Khawa</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-mug-hot"></i></div><div class="menu-name">Matka Chai</div><div class="menu-price">Rs. 200</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-mug-hot"></i></div><div class="menu-name">Karak Chai</div><div class="menu-price">Rs. 200</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-mug-hot"></i></div><div class="menu-name">Gur Chai</div><div class="menu-price">Rs. 250</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-mug-hot"></i></div><div class="menu-name">Masala Chai</div><div class="menu-price">Rs. 350</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-mug-hot"></i></div><div class="menu-name">Kashmiri Chai</div><div class="menu-price">Rs. 350</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-mug-hot"></i></div><div class="menu-name">Khawa (Dry Fruit)</div><div class="menu-price">Rs. 499</div></div>
+         </div>
+    </div>
+          
+        
+      <div class="category">
+      <h2><i class="fas fa-cookie-bite"></i> Chai Platter  </h2>
+      <div class="menu-grid">
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-cookie-bite"></i></div><div class="menu-name">Chai Platter - 1 Person</div><div class="menu-price">Rs. 700</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-cookie-bite"></i></div><div class="menu-name">Chai Platter - 2 Person</div><div class="menu-price">Rs. 1400</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-cookie-bite"></i></div><div class="menu-name">Chai Platter - 4 Person</div><div class="menu-price">Rs. 2000</div></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2><i class="fas fa-utensil-spoon"></i> Soups</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-utensil-spoon"></i></div><div class="menu-name">Veg Chicken Corn Soup</div><div class="menu-price">Rs. 500</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-utensil-spoon"></i></div><div class="menu-name">Family Bowl Soup</div><div class="menu-price">Rs. 1200</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-utensil-spoon"></i></div><div class="menu-name">Desi Yakhni (S)</div><div class="menu-price">Rs. 250</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-utensil-spoon"></i></div><div class="menu-name">Desi Yakhni (L)</div><div class="menu-price">Rs. 500</div></div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2><i class="fas fa-ice-cream"></i> Desserts</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-ice-cream"></i></div><div class="menu-name">C-Ban Dessert</div><div class="menu-price">Rs. 600</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-ice-cream"></i></div><div class="menu-name">Mango Dessert</div><div class="menu-price">Rs. 350</div></div>
+        <div class="menu-card"><div class="menu-icon"><i class="fas fa-ice-cream"></i></div><div class="menu-name">Chocolate Dessert</div><div class="menu-price">Rs. 350</div></div>
+      </div>
+    </div>
+
+    
+      <a href="index.html" class="back-btn">← Back to Summer Menu</a>
+  </section>
+
+  <script>
+    const canvas = document.querySelector(".snow");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    let flakes = [];
+    for (let i = 0; i < 80; i++) {
+      flakes.push({x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*4+1, d: Math.random()+1});
+    }
+    function drawFlakes() {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+      flakes.forEach(f => {
+        ctx.moveTo(f.x,f.y);
+        ctx.arc(f.x,f.y,f.r,0,Math.PI*2,true);
+      });
+      ctx.fill();
+      moveFlakes();
+    }
+    function moveFlakes() {
+      flakes.forEach((f,i) => {
+        f.y += f.d;
+        if (f.y > canvas.height) {
+          flakes[i] = {x: Math.random()*canvas.width, y: 0, r: f.r, d: f.d};
+        }
+      });
+    }
+    setInterval(drawFlakes, 33);
+  </script>
+</body>
+</html>
